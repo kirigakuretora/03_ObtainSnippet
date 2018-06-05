@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>04_kirigakureADOAdapter</Title>
+      <Author>
+      </Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>kirigakureADOAdapter</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>EntityDataAdapter</ID>
+          <ToolTip>EntityDataAdapter</ToolTip>
+          <Default>EntityDataAdapter</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>Adaper</ID>
+          <ToolTip>Adaper</ToolTip>
+          <Default>Adaper</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>DS</ID>
+          <ToolTip>DS</ToolTip>
+          <Default>DS</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>ConnectionName</ID>
+          <ToolTip>ConnectionName</ToolTip>
+          <Default>ConnectionName</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[            $EntityDataAdapter$ $Adaper$ = new $EntityDataAdapter$("Query String", $ConnectionName$);
+            DataSet $DS$ = new DataSet("DataSet Name");
+            $Adaper$.Fill($DS$, "Table Name");]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

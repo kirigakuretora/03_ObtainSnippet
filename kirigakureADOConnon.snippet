@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>02_kirigakureADOConnon</Title>
+      <Author>
+      </Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>kirigakureADOConnon</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>ConnectionString</ID>
+          <ToolTip>連線字串</ToolTip>
+          <Default>ConnectionString</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>EntityConnection</ID>
+          <ToolTip>ADO Connection 物件</ToolTip>
+          <Default>EntityConnection</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[var $ConnectionString$="";
+using (var con = new $EntityConnection$($ConnectionString$))
+{
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

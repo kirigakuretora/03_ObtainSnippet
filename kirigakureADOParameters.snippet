@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>03_kirigakureADOParameters</Title>
+      <Author>
+      </Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>kirigakureADOParameters</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>ParametersName</ID>
+          <ToolTip>ParametersName</ToolTip>
+          <Default>ParametersName</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>ParametersValue</ID>
+          <ToolTip>ParametersValue</ToolTip>
+          <Default>ParametersValue</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>EntityCommand</ID>
+          <ToolTip>EntityCommand</ToolTip>
+          <Default>EntityCommand</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[con.Open();
+$EntityCommand$ cmd = con.CreateCommand();
+cmd.CommandText = "";
+cmd.Parameters.AddWithValue($ParametersName$, $ParametersValue$);
+con.Close();]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
