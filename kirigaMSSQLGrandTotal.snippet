@@ -5,14 +5,14 @@
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
-      <Title>kirigaMSSQLInforationSchemaColum</Title>
+      <Title>kirigaMSSQLGrandTotal</Title>
       <Author>
       </Author>
       <Description>
       </Description>
       <HelpUrl>
       </HelpUrl>
-      <Shortcut>kirigaMSSQLInforationSchemaColum</Shortcut>
+      <Shortcut>kirigaMSSQLGrandTotal</Shortcut>
     </Header>
     <Snippet>
       <Declarations>
@@ -23,8 +23,24 @@
           <Function>
           </Function>
         </Literal>
+        <Literal Editable="true">
+          <ID>Amount</ID>
+          <ToolTip>Amount</ToolTip>
+          <Default>Amount</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>Cost</ID>
+          <ToolTip>Cost</ToolTip>
+          <Default>Cost</Default>
+          <Function>
+          </Function>
+        </Literal>
       </Declarations>
-      <Code Language="sql" Delimiter="$"><![CDATA[SELECT $ColumnName$ FROM INFORMATION_SCHEMA.COLUMNS]]></Code>
+      <Code Language="sql" Delimiter="$"><![CDATA[SELECT Sum($ColumnName$.$Amount$) AS $Amount$
+, Sum($ColumnName$.$Cost$) AS $Cost$ 
+FROM $ColumnName$;]]></Code>
     </Snippet>
   </CodeSnippet>
 </CodeSnippets>
